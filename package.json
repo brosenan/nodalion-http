@@ -1,0 +1,36 @@
+{
+  "name": "nodalion-http",
+  "version": "1.0.0",
+  "description": "An HTTP implementation for Nodalion based on express",
+  "main": "http.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha -C -R dot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brosenan/nodalion-http.git"
+  },
+  "keywords": [
+    "http",
+    "express",
+    "nodalion",
+    "cedalion"
+  ],
+  "author": "Boaz Rosenan <brosenan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brosenan/nodalion-http/issues"
+  },
+  "homepage": "https://github.com/brosenan/nodalion-http#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "mocha": "^2.3.4",
+    "nodalion": "^1.0.6",
+    "request": "^2.67.0",
+    "suspend": "^0.7.0"
+  }
+}

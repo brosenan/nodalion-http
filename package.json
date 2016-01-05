@@ -1,6 +1,6 @@
 {
   "name": "nodalion-http",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An HTTP implementation for Nodalion based on express",
   "main": "http.js",
   "directories": {

@@ -6,7 +6,6 @@ var request = require('request');
 
 var Nodalion = require('nodalion');
 var nodalionHttp = require('../http.js');
-//var objStore = require('../objStore.js');
 
 var ns = Nodalion.namespace('/nodalion', ['http', 'jsonObj', 'jsonList', 'jsonStr', 'jsonNum', 'field']);
 var example = Nodalion.namespace('example', ['myApp']);
@@ -63,29 +62,6 @@ describe('http', function(){
 	    assert.equal(resp[1].statusCode, 200);
 	    assert.equal(resp[2], '{"result":5}');
 	}));
-//	it('should handle objStore content requests', $T(function*(){
-//	    var hash = yield objStore.addString('Hello, World\n', $R());
-//	    var resp = yield request('http://localhost:3002/objStore/' + hash, $RR());
-//	    assert.ifError(resp[0]);
-//	    assert.equal(resp[1].statusCode, 200);
-//	    assert.equal(resp[1].headers['content-type'].split(';')[0], 'text/foo');
-//	    assert.equal(resp[2], 'Hello, World\n');
-//	}));
-//	it('should handle objStore add requests', $T(function*(){
-//	    var resp = yield request({
-//		url: 'http://localhost:3002/objStore',
-//		method: 'POST',
-//		headers: {'content-type': 'text/foo'},
-//		body: 'Hello, World\n',
-//	    }, $RR());
-//	    assert.ifError(resp[0]);
-//	    assert.equal(resp[1].statusCode, 200);
-//	    var url = JSON.parse(resp[2]).url;
-//	    resp = yield request(url, $RR());
-//	    assert.ifError(resp[0]);
-//	    assert.equal(resp[1].statusCode, 200);
-//	    assert.equal(resp[2], 'Hello, World\n');
-//	}));
 
 	it('should handle json POST requests', $T(function*(){
 	    var resp = yield request({

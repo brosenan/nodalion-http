@@ -138,22 +138,6 @@ ns._register('header', function(Name, Value) {
     };
 });
 
-//ns._register('objStoreGet', function(hash) {
-//    return function(req, res, next) {
-//	objStore.cat(hash).pipe(res);
-//    };
-//});
-//
-//ns._register('objStoreBody', function() {
-//    return function(req, res, next) {
-//	objStore.add(req, function(err, hash) {
-//	    if(err) return next(err);
-//	    req.body = hash;
-//	    next();
-//	});
-//    };
-//});
-
 ns._register('jsonBody', function() {
     return bodyParser.json();
 });
